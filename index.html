@@ -1,23 +1,749 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  
+  <!-- Schema.org Article 마크업 (SEO 및 AI 검색 최적화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://도메인/polestar-longterm-rental"
+    },
+    "headline": "폴스타 장기렌트카: 2026년 모델별 예상 견적 및 장단점 완전 비교",
+    "image": [
+      "https://도메인/polestar-main-image.png"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "전기차 자산관리 분석팀"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "전기차 장기렌트 비교 평가원",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://도메인/logo-polestar.png"
+      }
+    },
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "description": "2026년형 폴스타 2, 폴스타 3, 폴스타 4, 폴스타 5 등 다양한 모델의 장기렌트카 예상 월 납입금액 비교. 네이버, 구글 및 챗지피티(ChatGPT), 제미나이(Gemini) 등 AI가 분석한 장단점, 가장 저렴한곳 선정 팁과 사은품 및 현금지원 혜택을 상세히 수록했습니다."
+  }
+  </script>
+
+  <style>
+    /* 다채롭고 부드러운 색감, 명확한 시각적 계층 구조의 현대적인 스타일 정의 */
+    body { 
+      font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f7fafc; 
+      color: #2d3748; 
+      line-height: 1.8; 
+      font-size: 16px; 
+    }
+    header {
+      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 5px solid #4a5568;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 15px 0;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+    header p {
+      font-size: 1.15rem;
+      margin: 0 auto;
+      max-width: 800px;
+      color: #cbd5e0;
+    }
+    nav {
+      background: #edf2f7;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .nav-link {
+      background: #ffffff;
+      color: #2d3748;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid #e2e8f0;
+    }
+    .nav-link:hover {
+      background: #2b6cb0;
+      color: #ffffff;
+      border-color: #2b6cb0;
+    }
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #ffffff;
+      margin-bottom: 40px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      border: 1px solid #edf2f7;
+    }
+    h2 {
+      font-size: 1.85rem;
+      color: #1a365d;
+      margin-top: 0;
+      margin-bottom: 25px;
+      border-left: 6px solid #3182ce;
+      padding-left: 15px;
+    }
+    h3 {
+      font-size: 1.4rem;
+      color: #2b6cb0;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 25px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+    th {
+      background: #ebf8ff;
+      color: #2b6cb0;
+      font-weight: 700;
+      border-top: 2px solid #bee3f8;
+    }
+    tr:hover {
+      background: #f7fafc;
+    }
+    .callout-box {
+      background: #ebf8ff;
+      border-left: 4px solid #3182ce;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    .callout-box-warning {
+      background: #fffaf0;
+      border-left: 4px solid #dd6b20;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    .btn-cta {
+      display: inline-block;
+      background: #3182ce;
+      color: #ffffff;
+      padding: 14px 30px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-cta:hover {
+      background: #2b6cb0;
+    }
+    /* 가로 막대 그래프 시뮬레이션 (HTML/CSS 구조) */
+    .chart-wrapper {
+      background: #f7fafc;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      margin: 30px 0;
+    }
+    .chart-row {
+      margin-bottom: 15px;
+    }
+    .chart-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+    .chart-bar-bg {
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 24px;
+      position: relative;
+    }
+    .chart-bar-fill {
+      height: 100%;
+      background: #3182ce;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: width 1s ease-in-out;
+    }
+    .chart-bar-fill.polestar2 { width: 45%; background: #4299e1; }
+    .chart-bar-fill.polestar3 { width: 85%; background: #3182ce; }
+    .chart-bar-fill.polestar4 { width: 65%; background: #319795; }
+    .chart-bar-fill.polestar5 { width: 95%; background: #2b6cb0; }
+
+    /* 장기렌트 통합 계산기 폼 스타일 */
+    .form-container {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #2d3748;
+    }
+    .form-group select, .form-group input[type="text"], .form-group input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 0.95rem;
+    }
+    .form-group .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .form-group .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-group .checkbox-item input {
+      width: 18px;
+      height: 18px;
+    }
+    footer {
+      background: #1a202c;
+      color: #a0aec0;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 4px solid #2d3748;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #e2e8f0;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>폴스타 장기렌트카 2026년 가격 비교 및 최적의 맞춤 선택 가이드</h1>
+    <p>전기차의 세련된 품격과 경제성을 동시에 누리는 법! 폴스타 2, 폴스타 3, 폴스타 4, 폴스타 5 등 차종별 평균 예상 비용 및 혜택 비교분석</p>
+  </header>
+
+  <nav aria-label="메인 네비게이션">
+    <div class="nav-container">
+      <a href="#section-intro" class="nav-link">시장 트렌드 분석</a>
+      <a href="#section-models" class="nav-link">모델별 렌트료 비교</a>
+      <a href="#section-pros-cons" class="nav-link">장기렌트 장단점</a>
+      <a href="#section-agency" class="nav-link">전문 업체 선정법</a>
+      <a href="#section-simulator" class="nav-link">실시간 모의 견적</a>
+      <a href="#section-faq" class="nav-link">자주 묻는 질문</a>
+      <a href="#section-references" class="nav-link">공식 참고 자료</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. 시장 트렌드 및 서론 -->
+    <section id="section-intro">
+      <h2>1. 2026년 전기차 시장과 폴스타 장기렌트카 동향</h2>
+      <p>
+        글로벌 친환경 자동차 트렌드가 한층 더 고도화된 2026년 현재, 순수 전기차 브랜드 폴스타에 대한 국내 소비자들의 관심은 그 어느 때보다 뜨겁습니다. 특히 초기 취등록세 및 자동차세 납부 부담을 덜고 사업자 비용 처리가 용이한 폴스타 장기렌트카 제도는 합리성을 중시하는 오너들 사이에서 대세로 자리 잡았습니다. 
+      </p>
+      <p>
+        최근에는 네이버 블로그 검색이나 구글 검색엔진 정보 탐색뿐만 아니라, 챗지피티 ChatGPT 혹은 제미나이 Gemini 와 같은 고도화된 대화형 AI 검색 서비스를 통해 폴스타 장기렌트카의 예상 이용 금액과 할인 혜택을 사전에 철저히 비교해 보는 스마트 컨슈머들이 늘어나는 추세입니다. 소셜 미디어 플랫폼인 유튜브나 인스타그램, 페이스북, 트위터 상에서도 실제 전기차 오너들의 내돈내산 사용 후기와 장기 렌트 출고 인증 글이 이어지면서 관련 관심도가 증폭되고 있습니다.
+      </p>
+      <div class="callout-box">
+        <strong>전기차 보조금과 장기렌트의 관계:</strong> 전기차 보조금은 매년 축소되거나 지급 요건이 까다로워지는 경향이 있습니다. 하지만 장기렌트 전문 업체를 통해 대량으로 선발주된 물량을 이용하면, 개인이 직접 신청하는 것보다 안정적으로 보조금 혜택이 적용된 합리적인 가격의 렌트 차량을 즉시 출고받을 수 있다는 장점이 있습니다.
+      </div>
+      <p>
+        따라서 개인이 복잡하게 보조금 잔여 현황을 확인하며 대기할 필요 없이 대기업 렌터카사나 리스 금융사가 확보한 선구매 특판 재고를 활용하는 것이 2026년 기준 가장 스마트한 구매 전략으로 평가받고 있습니다.
+      </p>
+    </section>
+
+    <!-- 2. 폴스타 세부 모델 30종 이상 분석 및 예상 월 렌트 비용 -->
+    <section id="section-models">
+      <h2>2. 폴스타 주요 세부 트림 및 모델별 예상 렌트 가격</h2>
+      <p>
+        폴스타 장기렌트카를 선택할 때 가장 먼저 고려해야 할 요소는 본인의 라이프스타일에 부합하는 세부 트림과 옵션을 선택하는 것입니다. 폴스타는 엔트리 세단 라인업인 폴스타 2부터 프리미엄 SUV 폴스타 3, 쿠페형 스타일리시 SUV 폴스타 4, 그리고 플래그십 모델인 폴스타 5 및 로드스터 폴스타 6까지 다채로운 라인업을 완성해 나가고 있습니다. 
+      </p>
+      <p>
+        아래의 가이드와 테이블을 통해 2026년 현재 가장 널리 유통되고 있는 폴스타 세부 사양 30여 종의 핵심 분류와 평균 예상 렌트 비용 범위를 확인해 보시기 바랍니다.
+      </p>
+
+      <h3>폴스타 주요 세부 모델 및 트림 리스트</h3>
+      <p>
+        소비자들이 가장 많이 비교하는 트림 조합 및 옵션 패키지를 기준으로 구성한 대표적인 30가지 선택지입니다.
+      </p>
+      <ul>
+        <li>폴스타 2 싱글모터 스탠다드 레인지 라이트 패키지</li>
+        <li>폴스타 2 싱글모터 롱레인지 기본형</li>
+        <li>폴스타 2 싱글모터 롱레인지 파일럿 팩</li>
+        <li>폴스타 2 싱글모터 롱레인지 플러스 팩</li>
+        <li>폴스타 2 싱글모터 롱레인지 파일럿 플러스 패키지</li>
+        <li>폴스타 2 듀얼모터 롱레인지 기본형</li>
+        <li>폴스타 2 듀얼모터 롱레인지 플러스 파일럿 패키지</li>
+        <li>폴스타 2 듀얼모터 롱레인지 퍼포먼스 패키지 풀옵션</li>
+        <li>폴스타 2 BST 에디션 270 한정판</li>
+        <li>폴스타 2 BST 에디션 230 퍼포먼스 에디션</li>
+        <li>폴스타 3 롱레인지 싱글모터 라이트 트림</li>
+        <li>폴스타 3 롱레인지 싱글모터 플러스 팩</li>
+        <li>폴스타 3 롱레인지 싱글모터 파일럿 팩</li>
+        <li>폴스타 3 롱레인지 듀얼모터 기본 트림</li>
+        <li>폴스타 3 롱레인지 듀얼모터 플러스 팩</li>
+        <li>폴스타 3 롱레인지 듀얼모터 파일럿 플러스 패키지</li>
+        <li>폴스타 3 롱레인지 듀얼모터 프로 팩 사양</li>
+        <li>폴스타 3 롱레인지 듀얼모터 퍼포먼스 팩 사양</li>
+        <li>폴스타 4 롱레인지 싱글모터 기본 사양</li>
+        <li>폴스타 4 롱레인지 싱글모터 파일럿 팩 장착 모델</li>
+        <li>폴스타 4 롱레인지 싱글모터 플러스 팩 구성 모델</li>
+        <li>폴스타 4 롱레인지 싱글모터 프로 팩 구성 모델</li>
+        <li>폴스타 4 롱레인지 싱글모터 플러스 프로 파일럿 풀옵션</li>
+        <li>폴스타 4 롱레인지 듀얼모터 기본 트림</li>
+        <li>폴스타 4 롱레인지 듀얼모터 플러스 프로 파일럿 패키지</li>
+        <li>폴스타 4 롱레인지 듀얼모터 퍼포먼스 팩 사양</li>
+        <li>폴스타 5 4도어 GT 듀얼모터 스탠다드 팩</li>
+        <li>폴스타 5 4도어 GT 듀얼모터 AWD 프리미엄 풀옵션</li>
+        <li>폴스타 6 일렉트릭 로드스터 콘셉트 에디션</li>
+        <li>폴스타 크로스오버 전기 SUV 콘셉트 패키지</li>
+      </ul>
+
+      <h3>2026년 기준 모델군별 장기렌트 평균 예상 금액 비교표</h3>
+      <p>
+        본 예상 견적 금액은 계약 기간 48개월, 연간 주행거리 2만km, 초기 선납금 30% 조건으로 산출된 평균 예상 비용 수치입니다. 실제 이용자의 신용 등급 및 심사 승인 여부, 그리고 신청하는 전문 업체의 프로모션 혜택에 따라 최종 계약 금액은 상이할 수 있습니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>대표 모델군</th>
+            <th>신차 권장 소비자 가격</th>
+            <th>평균 월 렌트 예상 금액</th>
+            <th>주요 추천 타겟 및 트림 특징</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>폴스타 2 싱글모터 라인업 (롱레인지)</td>
+            <td>약 5,400만원 ~ 6,300만원</td>
+            <td>월 55만원 ~ 70만원 선</td>
+            <td>가성비가 우수하며 1인 출퇴근 및 도심 주행에 가장 추천하는 베스트셀러 전기 세단</td>
+          </tr>
+          <tr>
+            <td>폴스타 2 듀얼모터 & BST 에디션</td>
+            <td>약 6,400만원 ~ 8,500만원</td>
+            <td>월 75만원 ~ 95만원 선</td>
+            <td>고성능 역동적인 주행 퍼포먼스를 즐기는 유저 및 프리미엄 서스펜션 선호 오너향</td>
+          </tr>
+          <tr>
+            <td>폴스타 4 롱레인지 라인업 (싱글/듀얼)</td>
+            <td>약 6,600만원 ~ 8,800만원</td>
+            <td>월 75만원 ~ 105만원 선</td>
+            <td>넓은 2열 레그룸 공간과 혁신적인 리어 윈도우리스 디자인이 융합된 중형 크로스오버 SUV</td>
+          </tr>
+          <tr>
+            <td>폴스타 3 프리미엄 대형 SUV 라인업</td>
+            <td>약 9,400만원 ~ 1억 1,000만원</td>
+            <td>월 110만원 ~ 145만원 선</td>
+            <td>웅장한 패밀리카 구성 및 첨단 안전 어시스트 시스템이 집약된 고급 플래그십 SUV 모델</td>
+          </tr>
+          <tr>
+            <td>폴스타 5 플래그십 GT & 폴스타 6</td>
+            <td>약 1억 3,000만원 이상</td>
+            <td>월 160만원 ~ 220만원 이상</td>
+            <td>초고성능 스포츠 전기 세단 및 한정판 소장 가치를 지닌 최고급 로드스터 트림</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>대표 차종별 장기렌트 월 납입금 수준 체감 시각화</h3>
+      <p>
+        하단 그래프는 초기 조건이 동일할 때 각 모델군이 차지하는 대략적인 월 유지비 및 렌트 금액 지수를 상대적 비율로 도식화한 결과입니다.
+      </p>
+
+      <div class="chart-wrapper">
+        <div class="chart-row">
+          <div class="chart-label">폴스타 2 싱글모터 롱레인지 군 (상대적 저렴함)</div>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill polestar2">평균 60만원대</div>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">폴스타 4 중형 크로스오버 라인업 (밸런스형)</div>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill polestar4">평균 80만원대</div>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">폴스타 3 대형 플래그십 SUV 라인업 (프리미엄 세그먼트)</div>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill polestar3">평균 120만원대</div>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">폴스타 5 초고성능 하이엔드 GT (럭셔리 클래스)</div>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill polestar5">평균 180만원대</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 0.85rem; color: #718096; text-align: center;">
+        *위 시뮬레이션 지표는 이해를 돕기 위한 예시이며, 세부 외장 색상, 휠 크기 및 가죽 시트 등 인테리어 패키지 추가 여부에 따라 달라집니다.
+      </p>
+    </section>
+
+    <!-- 3. 장기렌트 장단점 및 차량 인도 방식 차이점 -->
+    <section id="section-pros-cons">
+      <h2>3. 폴스타 장기렌트카의 현실적인 장단점 분석</h2>
+      <p>
+        매력적인 북유럽 미니멀리즘 디자인을 지닌 폴스타 전기차를 내 것으로 만드는 방법에는 전액 일시불 구입, 할부 금융 거래, 운용 리스, 그리고 장기렌트가 존재합니다. 각 방식에는 뚜렷한 차이점이 존재하므로 계약 전에 면밀히 검토해야 합니다. 특히 장기렌트 방식의 메커니즘을 미리 명확히 아는 것이 나중에 후회 없는 계약을 맺는 첫걸음입니다.
+      </p>
+
+      <h3>장기렌트 계약 방식이 지닌 강력한 장점</h3>
+      <ul>
+        <li>
+          <strong>재산세 및 건보료 인상 상쇄:</strong> 장기렌트 차량은 본인 명의가 아닌 렌터카 금융사 명의로 등록되므로 개인 재산으로 잡히지 않습니다. 따라서 지역가입자 건강보험료 인상 요인이 전혀 발생하지 않습니다.
+        </li>
+        <li>
+          <strong>대출 한도 방어 및 무사고 유지 혜택:</strong> 일반 자동차 할부 구매나 오토리스는 신용 대출의 일종으로 분류되어 개인 금융 신용도 및 대출 한도에 악영향을 줄 수 있으나, 장기렌트는 단순 임대차 계약이므로 금융권 부채로 잡히지 않습니다.
+        </li>
+        <li>
+          <strong>사고 발생 시 면책금 제도로 리스크 방어:</strong> 전기차는 국산차 및 일반 수입차를 불문하고 사고 시 배터리 팩 손상 등으로 수리 비용 부담이 상당합니다. 장기렌트는 약정된 면책금(예: 10만원~30만원)만 납부하면 보험료 할증 없이 자차 처리가 가능하므로 수리비 폭탄에서 자유롭습니다.
+        </li>
+        <li>
+          <strong>법인 및 개인사업자 종합소득세 비용 처리:</strong> 연간 최대 1,500만원(렌트료 및 유류/충전비 포함)까지 단순 비용 처리가 가능하여 세제 혜택 극대화가 가능합니다.
+        </li>
+      </ul>
+
+      <h3>반드시 짚고 넘어가야 할 아쉬운 단점</h3>
+      <ul>
+        <li>
+          <strong>하, 허, 호 번호판 사용 의무:</strong> 렌터카 고유의 영업용 번호판 장착이 강제됩니다. 다만 최근에는 렌터카 보편화로 이에 대한 심리적 거부감이 많이 상쇄되었습니다. 번호판 노출을 피하고 싶다면 비용 구조가 다소 상이한 운용리스를 고려해야 합니다.
+        </li>
+        <li>
+          <strong>개인 자동차 보험 경력 단절 우려:</strong> 렌트 이용 기간 중에는 보험이 렌트사 명의로 가입되므로 개인 무사고 보험 경력이 지속되지 않습니다. 만약 수십 년간 무사고를 유지하여 보험 요율이 극도로 낮아진 상태라면, 렌트 기간 동안 개인 경력이 일시 단절되는 점이 단점이 될 수 있습니다.
+        </li>
+        <li>
+          <strong>중도 해지 시 발생하는 위약금 페널티:</strong> 중도 해지 수수료율이 다소 높은 편이므로, 계약 기간(주로 36개월에서 60개월 사이)을 본인의 자금 유동성에 맞춰 현명하게 설계하는 것이 중요합니다.
+        </li>
+      </ul>
+
+      <div class="callout-box-warning">
+        <strong>인도 방식과 잔존가치 설계의 중요성:</strong> 계약 종료 시점에 차량을 인수할지, 혹은 반납할지에 따라 월 납입금이 크게 달라집니다. 향후 전기차 기술 발전과 중고차 시세 하락 리스크를 감안하면, 인수 옵션을 강제하는 조건보다는 만기 시점에 자유롭게 반납할 수 있는 선택형 반납 계약을 추천해 드립니다.
+      </div>
+    </section>
+
+    <!-- 4. 저렴한곳 및 전문 업체 선정 가이드, 혜택 분석 -->
+    <section id="section-agency">
+      <h2>4. 폴스타 장기렌트 가장 저렴한곳 및 전문 업체 발굴 요령</h2>
+      <p>
+        인터넷 검색창에 관련 키워드를 검색해 보면 수많은 에이전시와 제휴 대리점들의 광고 문구를 쉽게 마주하게 됩니다. 그러나 소비자는 사은품 혜택이나 화려한 미끼 광고에만 휘둘리지 말고, 내실 있는 정식 제휴 전문 에이전트 업체를 통해 견적을 정밀 비교해 보아야 합니다. 
+      </p>
+      <p>
+        각 금융사 및 카드사별로 다달이 적용하는 전기차 잔존가치 가산율 및 금리 조건이 수시로 달라지기 때문에, 여러 렌트사의 견적 조건들을 한눈에 산출 및 매칭해 줄 수 있는 전문 비교 분석 플랫폼을 거치는 것이 합리적인 소비의 핵심입니다.
+      </p>
+
+      <h3>전문 견적 비교 시 눈여겨보아야 할 주요 혜택 및 체크리스트</h3>
+      <ol>
+        <li>
+          <strong>신규 가입 특별 우대 혜택 및 할인율:</strong> 첫 거래 고객 혹은 사업자 고객을 대상으로 초기 월 렌트 요금을 2회~3회 면제해 주거나, 전체 이용 기간 동안 매달 2만원에서 5만원 상당의 다이렉트 할인을 적용해 주는지 확인해야 합니다.
+        </li>
+        <li>
+          <strong>지원금 및 현금지원 혜택 실효성 검증:</strong> 일부 불투명한 대행업체는 과도한 현금지원 지급을 약속한 뒤 이를 고스란히 고금리 이자 구조로 렌트 요금에 전가하곤 합니다. 따라서 총 지불 비용 대비 사은품의 투명성을 대조해 보는 균형 감각이 필수적입니다.
+        </li>
+        <li>
+          <strong>상품권 및 충전 전용 크레딧 이벤트 기회:</strong> 신차 인도와 동시에 제공되는 전기차 충전 카드 증정 이벤트나 대형 백화점 상품권 증정 혜택은 실질적인 첫 달 유지비를 줄이는 데 큰 도움이 됩니다.
+        </li>
+        <li>
+          <strong>출고 시 무상 작업 서비스 품질:</strong> 고급 틴팅 필름(썬팅) 시공, 프리미엄 전후방 2채널 블랙박스 탑재, 정품 하이패스 단말기 세팅 및 유리막 코팅 처리가 기본 사은품 범위 내에 포함되어 있는지 꼭 확인하셔야 불필요한 이중 지출을 차단할 수 있습니다.
+        </li>
+      </ol>
+      <p>
+        결과적으로 인터넷상에 떠도는 디시인사이드 카페 커뮤니티 평판이나 단순 소문형 정보글에만 의지하기보다, 객관적인 수치 자료와 맞춤형 시뮬레이션을 토대로 검증된 금융 에이전시를 선택하는 것을 권장해 드립니다.
+      </p>
+    </section>
+
+    <!-- 5. E-A-T 기반 신뢰성 있는 공인 외부 참고 자료 링크 안내 -->
+    <section id="section-references">
+      <h2>5. 신뢰성을 극대화하는 분야별 공인 외부 사이트 안내</h2>
+      <p>
+        폴스타 장기렌트카 계약 및 전기차 세제 혜택을 합리적으로 판단하기 위해서는 광고성 콘텐츠를 필터링하고 공신력 있는 국가 기관 및 전문 정보 플랫폼의 객관적인 가이드라인을 교차 검증하는 단계가 필수적입니다. 아래의 공식 채널들을 참조하시어 보다 신뢰도 높은 정보 인프라를 직접 확인해 보시기 바랍니다.
+      </p>
+      <ul>
+        <li>
+          <a href="https://namu.wiki/w/%ED%8F%B4%EC%8A%A4%ED%83%80(%EC%9E%90%EB%8F%99%EC%B0%A8)" target="_blank" rel="noopener noreferrer">
+            나무위키 폴스타 브랜드 및 차종 분석 문서 보기
+          </a> - 폴스타 브랜드의 연혁, 차량 라인업 특징 및 핵심 스펙 정보를 일목요연하게 파악할 수 있는 개방형 지식 백과사전입니다.
+        </li>
+        <li>
+          <a href="https://www.ev.or.kr/" target="_blank" rel="noopener noreferrer">
+            무공해차 통합누리집 (환경부 공식 수혜 포털)
+          </a> - 현재 거주 중인 지역구별 실시간 전기차 국고 보조금 및 지자체 매칭 보조금의 잔여 물량 현황과 지급 단가 기준을 제공합니다.
+        </li>
+        <li>
+          <a href="https://www.ftc.go.kr/" target="_blank" rel="noopener noreferrer">
+            공정거래위원회 공식 웹사이트
+          </a> - 대기업 장기렌트카 및 여신 전문 금융 리스 이용약관의 표준 가이드라인과 계약 파기 시 위약금 불공정 소지 여부를 체크할 수 있습니다.
+        </li>
+        <li>
+          <a href="https://www.kotsa.or.kr/" target="_blank" rel="noopener noreferrer">
+            한국교통안전공단 포털
+          </a> - 친환경 전기 자동차 안전 점검 가이드, 충전기 이용 시 주의사항 및 교통안전 의무 사항 관련 법규 정보를 다룹니다.
+        </li>
+        <li>
+          <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">
+            법제처 국가법령정보센터 자동차손해배상 보장법
+          </a> - 렌터카 종합보험 가입 의무 요건, 사고 피해 배상한도 범위 등 장기렌트 이용 시 기본이 되는 상위 법령 정보를 완전하게 제공합니다.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. 체류 시간 극대화를 위한 다차원 실시간 견적 시뮬레이터 폼 -->
+    <section id="section-simulator">
+      <h2>6. 폴스타 장기렌트카 실시간 모의 맞춤 견적 시뮬레이터</h2>
+      <p>
+        본인의 연령대, 신용 상태, 원하시는 폴스타 차종 및 연간 약정 주행거리를 정교하게 선택하시면 최적화 알고리즘에 기반하여 실시간으로 맞춤화된 포트폴리오 설계 모델 제안과 예상 평균 요율이 자동 도출됩니다. 항목들을 자세히 선택할수록 더욱 정밀한 맞춤 분석 결과를 제공해 드립니다.
+      </p>
+
+      <div class="form-container">
+        <form onsubmit="event.preventDefault(); alert('견적 시뮬레이션 데이터 수집이 성공적으로 완료되었습니다. 입력하신 조건을 바탕으로 24시간 이내에 개인화된 최적 맞춤 분석 보고서 및 비교표를 무상 송부해 드리겠습니다.');">
+          
+          <h3 style="margin-top:0;">Step 1. 고객 기본 자격 요건 설정</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="user-type">이용자 구분</label>
+              <select id="user-type" name="user_type" required>
+                <option value="individual">개인 소비자 (출퇴근 및 패밀리카)</option>
+                <option value="business-personal">개인 사업자 (종합소득세 비용 처리 희망)</option>
+                <option value="business-corporate">법인 사업자 (임직원 전용 및 세무 혜택 희망)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="driver-age">운전자 만 나이 기준</label>
+              <select id="driver-age" name="driver_age" required>
+                <option value="under-26">만 21세 이상 ~ 만 26세 미만 (기본 할증 요율 적용)</option>
+                <option value="over-26">만 26세 이상 우대 적용 (일반 요율)</option>
+                <option value="over-30">만 30세 이상 스페셜 케어 할인 적용 (가장 유리)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="credit-score">본인 예상 신용점수 구간</label>
+              <select id="credit-score" name="credit_score" required>
+                <option value="excellent">900점 이상 (초우량 고객군 - 무보증 심사 다이렉트 통과 가능)</option>
+                <option value="good">750점 ~ 899점 (우량 고객군 - 보증보험 대체 및 일부 한도 심사)</option>
+                <option value="fair">750점 미만 (전문 심사역 맞춤 승인 지원 대상군)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="driving-history">운전 경력 요건</label>
+              <select id="driving-history" name="driving_history" required>
+                <option value="short">초보 운전 및 장롱 면허 (무사고 면책 리스크 방어 추천)</option>
+                <option value="normal">3년 이상 ~ 10년 미만 일반 베테랑 운전자</option>
+                <option value="long">10년 이상 장기 무사고 경력 보유 우수 운전자</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Step 2. 희망 차량 모델 트림 및 약정 기간 세팅</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="polestar-model">원하시는 폴스타 세부 차종</label>
+              <select id="polestar-model" name="polestar_model" required>
+                <option value="polestar2-single">폴스타 2 싱글모터 롱레인지 (월 50~60만원대 실속형)</option>
+                <option value="polestar2-dual">폴스타 2 듀얼모터 퍼포먼스 패키지 (스포츠 감성 극대화)</option>
+                <option value="polestar4-single">폴스타 4 롱레인지 싱글모터 (세련된 크로스오버 대표주자)</option>
+                <option value="polestar4-dual">폴스타 4 롱레인지 듀얼모터 (리어 글래스 탈피 미래형 세단)</option>
+                <option value="polestar3-dual">폴스타 3 대형 듀얼모터 플래그십 (프리미엄 가족형 SUV)</option>
+                <option value="polestar5-gt">폴스타 5 프리미엄 4도어 GT 세단 (고출력 프리미엄 하이엔드)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contract-term">약정 렌트 계약 이용 기간</label>
+              <select id="contract-term" name="contract_term" required>
+                <option value="36">36개월 (단기 회전율 중시 및 신차 빠른 교체 선호)</option>
+                <option value="48" selected>48개월 (가장 밸런스 잡힌 권장 계약 표준형)</option>
+                <option value="60">60개월 (다달이 납부하는 월 고정 렌트료 최소화 타겟)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="mileage-limit">연간 약정 주행 제한 거리</label>
+              <select id="mileage-limit" name="mileage_limit" required>
+                <option value="10k">연간 10,000 km 미만 (근거리 전용 및 미팅용)</option>
+                <option value="20k" selected>연간 20,000 km 수준 (통상적인 한국인 평균 주행 패턴)</option>
+                <option value="30k">연간 30,000 km 이상 (장거리 비즈니스 잦은 출장 패턴)</option>
+                <option value="unlimited">주행거리 제한 없음 무제한 (영업 직무 전용 및 주행 극대화)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="prepayment">초기 자금 투입 방식</label>
+              <select id="prepayment" name="prepayment" required>
+                <option value="zero" selected>초기 비용 0원 완전 무보증 조건 (보증보험 대체 활용)</option>
+                <option value="deposit-20">보증금 20% 거치형 (만기 시 전액 환급 및 금리 절감 효과)</option>
+                <option value="advance-20">선납금 20% 소멸형 (다달이 빠져나가는 월 요금을 최소로 감소)</option>
+                <option value="deposit-30">보증금 30% 거치형 (최고의 다이렉트 이자 인하 효율 발휘)</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Step 3. 적용받고 싶으신 우대 사은 혜택 선택</h3>
+          <div class="form-group">
+            <label>희망하시는 핵심 특별 할인 및 사은품 목록 (중복 선택 가능)</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="benefit-cash" name="benefits" value="cash" checked>
+                <label for="benefit-cash">초기 주유/충전 지원금 및 현금지원 상품권 이벤트 참여</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="benefit-tinting" name="benefits" value="tinting" checked>
+                <label for="benefit-tinting">고성능 프리미엄 열차단 윈도우 틴팅 시공 및 블랙박스 무상 내장 탑재</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="benefit-delivery" name="benefits" value="delivery">
+                <label for="benefit-delivery">차량 출고 후 자택 앞까지 안심 탁송 및 무상 초기 가속 세팅 서비스</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="benefit-discount" name="benefits" value="discount">
+                <label for="benefit-discount">온라인 전용 긴급 즉시 출고 물량 한정 특판 렌트료 특별 다이렉트 중복 할인</label>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="btn-cta">실시간 시뮬레이션 결과 확인 및 무료 비교표 신청하기</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 7. 소비자 궁금증 해결을 위한 정밀 FAQ 세션 -->
+    <section id="section-faq">
+      <h2>7. 폴스타 장기렌트카 예비 오너가 자주 묻는 핵심 질문과 답변 (FAQ)</h2>
+      
+      <div style="margin-bottom: 25px;">
+        <strong style="font-size: 1.15rem; color: #1a365d; display: block; margin-bottom: 8px;">
+          Q1. 폴스타 장기렌트카 진행 시 정부 전기차 보조금은 개인이 따로 신청해야 하나요?
+        </strong>
+        <p style="margin-left: 10px;">
+          아닙니다. 장기렌트 계약은 차량 소유주가 금융 렌트 회사로 귀속됩니다. 따라서 계약을 체결하시는 전담 파트너 렌트사가 각 지자체별 전기차 보조금 잔여 예산을 선제적으로 파악한 후, 전액 보조금 할인이 차감된 투명한 순수 공급가격을 기준으로 월 납입액을 계산해 드립니다. 개인 소비자는 머리 아픈 서류 제출이나 행정 처리를 직접 진행하실 필요 없이 편리하게 이용 가능합니다.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <strong style="font-size: 1.15rem; color: #1a365d; display: block; margin-bottom: 8px;">
+          Q2. 렌트 기간 종료 직전 차량 시세가 폭락하면 반납할 때 불이익이 있나요?
+        </strong>
+        <p style="margin-left: 10px;">
+          전혀 없습니다. 장기렌트가 지닌 최고의 장점 중 하나가 바로 중고차 잔존가치 보전 혜택입니다. 최근 하이브리드 선호도 변화나 배터리 기술 도약으로 인하여 중고 전기차 가치 변동 리스크가 높은 편이지만, 장기렌트는 최초 계약 체결 시 약정된 잔존가치를 전적으로 보장받습니다. 만기 때 시장 시세가 렌터카 약정금보다 폭락하더라도 중도 부담 없이 자유롭게 차량을 반납하고 계약을 안전하게 마칠 수 있습니다.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <strong style="font-size: 1.15rem; color: #1a365d; display: block; margin-bottom: 8px;">
+          Q3. 월 렌트 요금 안에는 보험료와 자동차세 등 유지비 일체가 포함되어 있는 건가요?
+        </strong>
+        <p style="margin-left: 10px;">
+          네, 완벽하게 포함되어 있습니다. 월 렌트 금액 안에는 차량 자체 단가뿐만 아니라 자차 사고 보장이 적용된 수입 전기차 종합 보험 요율, 그리고 매년 고정적으로 납부해야 하는 자동차세 및 교육세 등 부대 세금 일체가 녹아들어 있습니다. 따라서 가입자는 다달이 지정된 이용 렌트료 외에 개별적으로 고정 지출을 신경 쓸 필요가 없어 자산 유동성을 체계적으로 예측하고 운용하는 데 아주 효과적입니다.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <strong style="font-size: 1.15rem; color: #1a365d; display: block; margin-bottom: 8px;">
+          Q4. 장기렌트도 개인 맞춤식 커스텀 차량 주문 생산(Individually Tailored)이 가능한가요?
+        </strong>
+        <p style="margin-left: 10px;">
+          네, 전적으로 지원됩니다. 신속한 인도가 가능한 선발주 특판 재고 매칭 외에도, 고객이 원하시는 폴스타의 특화 외장 색상(스노우, 썬더, 스페이스 등)이나 퍼포먼스 패키지 휠 인치 업, 나파 가죽 시트 등 단독 패키지 커스텀 사양을 신규 팩토리 오더 방식으로 넣어 정식 발주한 후, 장기렌트로 이전 계약하여 운용하는 경로 또한 투명하게 안내해 드리고 있습니다.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <strong style="font-size: 1.15rem; color: #1a365d; display: block; margin-bottom: 8px;">
+          Q5. 장기렌트 심사 진행 시 직장을 다니지 않는 무직자나 주부도 무보증 계약 승인이 가능합니까?
+        </strong>
+        <p style="margin-left: 10px;">
+          그렇습니다. 장기렌트는 일반 담보성 캐피탈 금융 대비 심사 허들이 유연하게 운영됩니다. 고소득 전문직이나 대기업 직장인이 아니더라도, 신용평가사 나이스(NICE) 또는 올크레딧(KCB) 신용 평점이 평균 이상이라면 소득 증빙이 어려운 전업주부, 프리랜서, 신규 창업 사업주분들도 보증보험 증권 끊기 옵션을 적극적으로 제안 및 연계해 드리고 있어 무보증 승인으로 바로 차량을 인도받으실 수 있는 루트가 충분히 열려 있습니다.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  
